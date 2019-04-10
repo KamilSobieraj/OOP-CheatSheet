@@ -1,1 +1,50 @@
-console.log("works!");
+//**************************Object literal
+/* ****************************************************************************
+
+const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1
+  },
+  draw: function() {
+    console.log("draw object literal");
+  }
+};
+
+circle.draw();
+
+
+**************************************************************************** */
+//**************************Factory function
+/* ****************************************************************************
+
+function createCircle(radius) {
+  return {
+    radius,
+    draw: function() {
+      console.log("draw factory function");
+    }
+  };
+}
+
+const circle = createCircle(1);
+circle.draw();
+
+
+**************************************************************************** */
+//**************************Constructor function
+/* ****************************************************************************
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.log("draw consructor function");
+  };
+}
+
+const circle = new Circle(1);
+circle.draw();
+
+
+**************************************************************************** */
