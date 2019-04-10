@@ -48,3 +48,29 @@ circle.draw();
 
 
 **************************************************************************** */
+//**************************Function are objects
+/* ****************************************************************************
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.log("draw consructor function");
+  };
+}
+
+const CircleTwo = new Function(
+  "radius",
+  `this.radius = radius;
+this.draw = function() {
+  console.log("draw consructor function  two");
+};`
+);
+
+const circle = new Circle(1);
+const circleTwo = new CircleTwo(1);
+circle.draw();
+circleTwo.draw();
+console.log(circleTwo); //Output object: {radius: 1, draw: ƒ}
+
+
+**************************************************************************** */
