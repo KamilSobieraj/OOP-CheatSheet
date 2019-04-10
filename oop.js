@@ -154,3 +154,32 @@ console.log(circle.secretRadius, circle.radius); // undefined 10
 
 
 **************************************************************************** */
+
+function StopWatch() {
+  let startTime,
+    endTime,
+    duration = 0;
+  let running = false;
+
+  this.start = function() {
+    if (running) {
+      throw new Error("StopWatch has already started!");
+    }
+    running = true;
+    startTime = new Date();
+  };
+
+  this.stop = function() {
+    if (!running) {
+      throw new Error("StopWatch is already stopped!");
+    }
+    running = false;
+    endTime = new Date();
+    duration = (endTime.getTime() - startTime.getTime()) / 1000;
+    console.log(duration);
+  };
+
+  this.reset = function() {
+    running = false;
+  };
+}
