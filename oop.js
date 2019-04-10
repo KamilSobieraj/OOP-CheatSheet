@@ -137,4 +137,20 @@ if ("radius" in circle) {
 
 
 **************************************************************************** */
-//**************************Enummerating Poperities
+//**************************Abstraction (Hide details, show essentials)
+/* ****************************************************************************
+
+function Circle(radius) {
+  this.radius = radius;
+  let secretRadius = 20;
+  this.draw = function() {
+    secretRadius;
+    console.log("draw consructor function");
+  };
+}
+
+circle = new Circle(10);
+console.log(circle.secretRadius, circle.radius); // undefined 10
+
+
+**************************************************************************** */
