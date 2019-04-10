@@ -74,3 +74,22 @@ console.log(circleTwo); //Output object: {radius: 1, draw: ƒ}
 
 
 **************************************************************************** */
+//**************************Values vs Reference Types
+/* ****************************************************************************
+
+let number = 10;
+function inc(num) {
+  num++;
+}
+inc(number);
+console.log(number); // 10
+
+let obj = { value: 10 };
+function inc(obj) {
+  obj.value++;
+}
+inc(obj);
+console.log(obj.value); // 11
+
+
+**************************************************************************** */
